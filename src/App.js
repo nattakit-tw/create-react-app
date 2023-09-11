@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Expenses from "./components/Expenses";
+=======
+import ExpenseItem from "./components/ExpenseItem";
+>>>>>>> main
 
 function App() {
   const expenses = [
