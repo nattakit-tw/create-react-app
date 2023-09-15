@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 
 function App() {
   const expenses = [
@@ -24,7 +25,7 @@ function App() {
   ];
   return (
     <div>
-      <h2>Get statered React!!!</h2>
+      <NewExpenses/>
       <Expenses expenses={expenses}/>
     </div>
   );
