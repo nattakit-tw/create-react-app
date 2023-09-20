@@ -23,9 +23,13 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const onSaveEapenseDataHandler = (expense) => {
+    console.log(expense);
+  }
   return (
     <div>
-      <NewExpenses/>
+      <NewExpenses onSaveEapenseDataHandler={onSaveEapenseDataHandler}/>
       <Expenses expenses={expenses}/>
     </div>
   );
