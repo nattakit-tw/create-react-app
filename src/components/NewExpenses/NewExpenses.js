@@ -3,13 +3,13 @@ import './NewExpenses.css'
 
 function NewExpenses(props){
 
-    const onSaveEapenseDataHandler = (expenseData) => {
-        props.onSaveEapenseDataHandler(expenseData);
+    const onSaveExpenseDataHandler = (expenseData) => {
+        props.onSaveExpenseDataHandler(expenseData);
     }
 
     return (
         <div className="new-expense">
-            <ExpensesForm onSaveEapenseDataHandler={onSaveEapenseDataHandler}/>
+            <ExpensesForm onSaveExpenseDataHandler={onSaveExpenseDataHandler}/>
         </div>
     );
 }

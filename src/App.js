@@ -1,8 +1,9 @@
+import React, { useState } from 'react';
 import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpenses/NewExpenses";
 
 function App() {
-  const expenses = [
+  const DUMMY_EXPENSES = [
     {
       id: "e1",
       title: "Toilet Paper",
@@ -24,12 +25,15 @@ function App() {
     },
   ];
 
-  const onSaveEapenseDataHandler = (expense) => {
-    console.log(expense);
+
+  const [expenses , setExpenses] = useState(DUMMY_EXPENSES);
+
+  const onSaveExpenseDataHandler = (expense) => {
+    setExpenses(pervState => [expense, ...pervState])
   }
   return (
     <div>
-      <NewExpenses onSaveEapenseDataHandler={onSaveEapenseDataHandler}/>
+      <NewExpenses onSaveExpenseDataHandler={onSaveExpenseDataHandler}/>
       <Expenses expenses={expenses}/>
     </div>
   );
